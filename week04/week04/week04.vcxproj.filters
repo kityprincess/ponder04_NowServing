@@ -29,9 +29,6 @@
     <ClCompile Include="week04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="deque.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="makefile" />
