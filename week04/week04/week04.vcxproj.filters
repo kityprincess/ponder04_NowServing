@@ -15,7 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="makefile" />
+    <ClInclude Include="nowServing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deque.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="nowServing.cpp">
@@ -24,10 +29,11 @@
     <ClCompile Include="week04.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="deque.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="nowServing.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="makefile" />
   </ItemGroup>
 </Project>
