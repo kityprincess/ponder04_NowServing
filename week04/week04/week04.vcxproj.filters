@@ -15,13 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="deque.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="makefile" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="deque.cpp">
+    <ClCompile Include="nowServing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="week04.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nowServing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

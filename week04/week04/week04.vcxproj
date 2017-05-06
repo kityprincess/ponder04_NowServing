@@ -110,10 +110,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="deque.h" />
+    <None Include="makefile" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="deque.cpp" />
+    <ClCompile Include="nowServing.cpp" />
+    <ClCompile Include="week04.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="nowServing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
