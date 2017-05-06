@@ -2,12 +2,3 @@
 
 
 
-Deque::Deque()
-{
-   // Test
-}
-
-
-Deque::~Deque()
-{
-}
