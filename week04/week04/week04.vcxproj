@@ -117,6 +117,7 @@
     <ClCompile Include="week04.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="deque.h" />
     <ClInclude Include="nowServing.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
