@@ -13,6 +13,8 @@
 #include <cassert>      // for ASSERT
 #include "nowServing.h" // for nowServing() prototype
 #include "deque.h"      // for DEQUE
+#include "student.h"    // for Student data
+#include "line.h"
 using namespace std;
 
 /************************************************
@@ -30,9 +32,48 @@ void nowServing()
    cout << "\tfinished                     : end simulation\n";
 
    // your code here
+   Student student;
+   int timeCount = student.getTime();
+   
+   // declaring variables
+   string m_className;
+   string m_name;
+   int m_time;
+   
+   // saving data into variables here
+   cin >> m_className >> m_name >> m_time;
+   
+   // passing these variable into student class
+   student.setClass(m_className);  
+   student.setName(m_name);
+   student.setTime(m_time);
+
+   Deque <Student> line;
+   if (student.emerg())
+   {
+      line.push_front(student);
+      cout << "Emergency for " << line.front().getName() << " for class "
+         << line.front().getClass() << ". Time left: " << timeCount--;
+   }
+   else if (m_className == "none")
+   {
+      cout << "Currently serving " << line.front().getName() << " for class "
+         << line.front().getClass() << ". Time left: " << timeCount--;
+   }
+   else if (m_className == "finished")
+   {
+      return;
+   }
+   else
+   {
+      line.push_back(student);
+      cout << "Currently serving " << line.front().getName() << " for class "
+         << line.front().getClass() << ". Time left: " << timeCount--;
+   }
 
    // end
    cout << "End of simulation\n";
 }
+
 
 

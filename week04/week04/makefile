@@ -27,3 +27,5 @@ week04.o: deque.h week04.cpp
 
 nowServing.o: nowServing.h nowServing.cpp deque.h
 	g++ -c nowServing.cpp
+
+student.o: student.h
