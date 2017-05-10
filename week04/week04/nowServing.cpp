@@ -32,44 +32,77 @@ void nowServing()
    cout << "\tfinished                     : end simulation\n";
 
    // your code here
-   Student student;
-   int timeCount = student.getTime();
+   Student currentStudent;
+   Student incomingStudent;
    
    // declaring variables
-   string m_className;
-   string m_name;
-   int m_time;
-   
-   // saving data into variables here
-   cin >> m_className >> m_name >> m_time;
-   
-   // passing these variable into student class
-   student.setClass(m_className);  
-   student.setName(m_name);
-   student.setTime(m_time);
+   string className;
+   string name;
+   int time;
+   int minutesPassed = 0;
 
+   // create deque to hold students
    Deque <Student> line;
-   if (student.emerg())
-   {
-      line.push_front(student);
-      cout << "Emergency for " << line.front().getName() << " for class "
-         << line.front().getClass() << ". Time left: " << timeCount--;
+
+   do {
+      // keep track of minutes passed since simulation began
+      cout << "<" << minutesPassed++ << "> ";
+   
+      // saving data into variables here
+      cin >> className;
+      if (className == "!!")
+      {
+         cin >> className >> name >> time;
+         // passing these variable into student class
+         incomingStudent.setClass(className);  
+         incomingStudent.setName(name);
+         incomingStudent.setTime(time);
+         incomingStudent.setEmergency(true);
+         line.push_front(incomingStudent);
+      }
+      else if (className != "none" && className != "finished")
+      {
+         cin >> name >> time;
+         incomingStudent.setClass(className);  
+         incomingStudent.setName(name);
+         incomingStudent.setTime(time);
+         incomingStudent.setEmergency(false);
+         line.push_back(incomingStudent);
+      }
+      else if (className == "finished")
+      {
+         break;
+      }
+      else if (className != "none")
+      {
+         cout << "Invalid command";
+      }
+      int timeCount = currentStudent.getTime();
+      if (timeCount > 0)
+      {
+         timeCount--;
+         currentStudent.setTime(timeCount);
+      }
+      if (currentStudent.getTime() == 0)
+      {
+         if (!line.empty())
+            currentStudent = line.pop_front();
+      }
+      if (currentStudent.getTime() > 0)
+      {
+         if (currentStudent.isEmergency())
+         {
+         cout << "\tEmergency for " << currentStudent.getName() << " for class "
+            << currentStudent.getClass() << ". Time left: " << currentStudent.getTime() << endl;
+         }
+         else
+         {
+         cout << "\tCurrently serving " << currentStudent.getName() << " for class "
+            << currentStudent.getClass() << ". Time left: " << currentStudent.getTime() << endl;
+         }
+      }
    }
-   else if (m_className == "none")
-   {
-      cout << "Currently serving " << line.front().getName() << " for class "
-         << line.front().getClass() << ". Time left: " << timeCount--;
-   }
-   else if (m_className == "finished")
-   {
-      return;
-   }
-   else
-   {
-      line.push_back(student);
-      cout << "Currently serving " << line.front().getName() << " for class "
-         << line.front().getClass() << ". Time left: " << timeCount--;
-   }
+   while (className != "finished");
 
    // end
    cout << "End of simulation\n";

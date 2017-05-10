@@ -21,11 +21,12 @@ a.out: deque.h week04.o nowServing.o
 # The individual components
 #      week04.o       : the driver program
 #      nowServing.o   : the logic for the now serving program
+#      student.o      : the logic for the student program
+#      line.o  		 : the logic for the line program
 ##############################################################
 week04.o: deque.h week04.cpp
 	g++ -c week04.cpp
 
-nowServing.o: nowServing.h nowServing.cpp deque.h
+nowServing.o: nowServing.h nowServing.cpp deque.h student.h line.h
 	g++ -c nowServing.cpp
 
-student.o: student.h
