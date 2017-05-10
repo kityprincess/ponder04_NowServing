@@ -25,7 +25,6 @@ class Student
    void setName(string in_name)         { this->m_name = in_name;  }
    void setClass(string in_className)   { this->m_className = in_className; }
    void setEmergency(bool in_emergency) { this->m_emergency = in_emergency; }
-   //bool emerg()                       { return (m_className == "!!") ? 1 : 0; }
 
   private:
    string m_name;

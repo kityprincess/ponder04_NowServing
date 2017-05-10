@@ -10,9 +10,9 @@
 #define Line_h
 
 #include <string>      // for STRING
-#include <cassert>
-#include "student.h"
-#include "deque.h"
+#include <cassert>     // for ASSERT
+#include "student.h"   // for STUDENT
+#include "deque.h"     // for DEQUE
 
 class Line
 {
@@ -27,7 +27,7 @@ public:
    }
    void addStudent(const Student & student)  { line.push_back(student); }
    void addEmerg(const Student & student)    { line.push_front(student); }
-   bool emtpy() const                        { return line.empty(); }
+   bool empty() const                        { return line.empty(); }
 
 private:
    Deque <Student> line;
