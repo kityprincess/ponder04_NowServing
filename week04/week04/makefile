@@ -7,7 +7,7 @@
 # Summary:
 #     <put a description here>
 # Time:
-#     <how long did it take to complete this program>?
+#     Matthew Burr : 4 hours
 ###############################################################
 
 ##############################################################

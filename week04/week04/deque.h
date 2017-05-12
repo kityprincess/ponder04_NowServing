@@ -1,13 +1,17 @@
-#pragma once
+#ifndef DEQUE_H
+#define DEQUE_H
+
+
 /********************************************************************
-* DEQUE
-*
-* Implements a deque, a double-ended-queue
-* @author Matthew Burr
-* @version 1.0
-* @since 2017-05-06
-* Citation: Props to Nyhoff's text book (chapter 8.3) for giving me
-* a more efficient approach to popping items
+* Header:
+ *    DEQUE
+ * Summary:
+ *    Implements a Deque class. With acknowledgement to Nyhoff's 
+ *    textbook for ideas around embedding the Node class and
+ *    approaches to handling the various push/pull functions as
+ *    well as other functions.
+ * Authors:
+ *    Bryan Lopez, Kimberly Stowe, Matthew Burr & Shayla Nelson
 *********************************************************************/
 #include <new>
 #include <cassert>
@@ -426,3 +430,4 @@ inline bool Deque<T>::isValid() const
 }
 
 
+#endif // !DEQUE_H
