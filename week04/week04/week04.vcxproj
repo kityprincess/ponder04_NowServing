@@ -118,7 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deque.h" />
+    <ClInclude Include="line.h" />
     <ClInclude Include="nowServing.h" />
+    <ClInclude Include="student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
