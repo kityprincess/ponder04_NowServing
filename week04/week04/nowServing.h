@@ -12,8 +12,8 @@
 #define NOW_SERVING_H
 
 #include "deque.h"      // for DEQUE
-#include "student.h"    // for Student data
-#include "line.h"
+#include "student.h"    // for STUDENT
+#include "line.h"       // for LINE
 
 // the interactive nowServing program
 void nowServing();

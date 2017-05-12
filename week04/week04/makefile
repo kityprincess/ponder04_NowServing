@@ -7,7 +7,7 @@
 # Summary:
 #     <put a description here>
 # Time:
-#     <how long did it take to complete this program>?
+#     Matthew Burr : 4 hours
 ###############################################################
 
 ##############################################################
@@ -25,5 +25,6 @@ a.out: deque.h week04.o nowServing.o
 week04.o: deque.h week04.cpp
 	g++ -c week04.cpp
 
-nowServing.o: nowServing.h nowServing.cpp deque.h
+nowServing.o: nowServing.h nowServing.cpp deque.h student.h line.h
 	g++ -c nowServing.cpp
+

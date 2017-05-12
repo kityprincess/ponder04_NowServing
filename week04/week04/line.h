@@ -10,16 +10,16 @@
 #define Line_h
 
 #include <string>      // for STRING
-#include <cassert>
-#include "student.h"
-#include "deque.h"
+#include <cassert>     // for ASSERT
+#include "student.h"   // for STUDENT
+#include "deque.h"     // for DEQUE
 
 class Line
 {
 public:
    Student serveNext() throw (std::string) 
    {
-      if (empty()) 
+      if (line.empty()) 
          throw std::string("empty line"); 
       Student next = line.front(); // retrieve the next 
       line.pop_front(); // the patron is no longer at the front 
@@ -27,9 +27,9 @@ public:
    }
    void addStudent(const Student & student)  { line.push_back(student); }
    void addEmerg(const Student & student)    { line.push_front(student); }
-   bool emtpy() const                        { return line.empty(); }
+   bool empty() const                        { return line.empty(); }
 
 private:
-   deque <Student> line;
+   Deque <Student> line;
 };
 #endif // LINE_H
